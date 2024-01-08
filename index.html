@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <mata http-equiv="X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Movies Website</title>
+    <!-- Link TO CSS-->
+    <link rel = "stylesheet" href = "style.css">  
+    <!-- Fov Icon-->
+    <link rel = "shortcut icon" href = "img/fav-icon.png" type ="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cards</title>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class = "nav container">
+            <a href = "index.html" class = "logo">
+                Movie<span>Vel</span>
+            </a>
+            <!-- 검색 창 만들기 -->
+            <div class = "search-box">
+                <input type="search" name ="" id="search-input" placeholder="Search movie" onkeydown="searchKeyPress(event)">
+                <i class='bx bx-search' onclick="searchMovies()"></i>
+                <!--placeholder은 그냥 이거에 대한 설명임 개발자가 알아볼수 있께-->
+
+            </div>
+            <!-- User -->
+            <a href="#" class="user">
+                <img src="https://th.bing.com/th/id/OIP._0nj-VCGpTVBUPZYf0UHYAHaHa?w=206&h=206&c=7&r=0&o=5&pid=1.7" alt="" class="user-img">
+            </a>
+            <div class = "navbar">
+                <a href="#home" class="nav-link nav-active " onclick="showHome()">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="#home" class="nav-link" onclick="showPopulars()">
+                    <i class='bx bxs-hot' ></i>
+                    <span class="nav-link-title">Populars</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-tv' ></i>
+                    <span class="nav-link-title">Movies</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-heart' ></i>
+                    <span class="nav-link-title">Favourite</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="home container" id="home">
+            <img src = "img/home-background.png" alt ="" class = "home-img">
+            <div class="home-text">
+                <h1 class="home-title">Hitman's Wife's <br>Bodyguard</h1>
+                <p>Releasing 10 April</p>
+                <h1>Welcome to Home</h1>
+                <a href="#" class="watch-btn">
+                    <i class='bx bx-right-arrow' ></i>
+                    <span>Watch the trailer</span>
+                </a>
+            </div>
+    </section>
+    <section class = "popular container" id = "popular">
+        <div class = "heading">
+            <h2 class = "heading-title"><p>popular Movies</p></h2>
+        </div>
+        <div id="movie-container"></div>
+            
+    </section>
+
+    <!-- Link To JS-->
+    <script src = "main.js"></script>
+</body>
+</html>
