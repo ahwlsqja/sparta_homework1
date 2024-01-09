@@ -15,10 +15,8 @@ searchInput.addEventListener('input', function () {
     const movieCards = document.querySelectorAll('.movie-card');
     movieCards.forEach(card => {
         const title = card.querySelector('h3').textContent.toLowerCase();
-        const description = card.querySelector('.description-container p').textContent.toLowerCase();
-
         // 검색어와 영화 제목 또는 설명이 일치하는 경우 보여줌
-        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+        if (title.includes(searchTerm)) {
             card.style.display = 'grid';
         } else {
             card.style.display = 'none';
@@ -104,7 +102,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
         // 다른 섹션 숨기기 등 추가 설정 가능
         // 예: 다른 섹션들은 숨기기
         var popularMoviesSection = document.querySelector('.popular');
-        popularMoviesSection.style.display = 'none';
+        popularMoviesSection.style.display = 'block';
     }
 
 function showMovieDetails(movieId) {
